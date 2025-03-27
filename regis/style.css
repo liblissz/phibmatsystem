@@ -1,0 +1,32 @@
+
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(120deg, #1c5e9c, #27a082);
+}
+form{
+width: 80%;
+display: flex;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 50px;
+gap: 100px;
+}
+input{
+    background: #3fb2c7;
+    padding: 20PX;
+    margin-top: 40PX;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+input:hover{
+    background: white;
+    color: #27a082;
+}

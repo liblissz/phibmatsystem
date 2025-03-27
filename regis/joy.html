@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+body {
+  box-sizing: content-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+a {
+  color: #000d80;
+}
+
+a:hover {
+  color: #000d80;
+}
+
+div {
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  line-height: 1em;
+}
+
+h1 small {
+  display: block;
+  font-size: 0.5em;
+}
+
+h2 {
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+.container {
+  margin: 40px;
+  width: calc(100% - 80px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+  height: 500px;
+  margin: 0 0 20px;
+  color: #ffff;
+  position: relative;
+}
+
+.card .card-image {
+  background: #666;
+  display: inline-flex;
+  overflow: hidden;
+  height: 400px;
+  width: auto;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  position: relative;
+  z-index: 1;
+}
+
+.card .card-image img {
+  height: 400px;
+  object-fit: cover;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+}
+
+.card .card-title {
+  background: #000d80;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  margin: -5px 0 0 -20px;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+}
+
+.card .card-title::before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent #000d80 transparent;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  z-index: -1;
+}
+
+.card .card-title::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: #000d80 transparent transparent transparent;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+  z-index: -1;
+}
+
+.card .card-detail {
+  background: #000d80;
+color: #333;
+  background: #eee;
+  height: auto;
+  margin: 0;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+}
+
+.card .tgl-btn {
+   
+  background: #000d80;
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  z-index: 99;
+  top: 10px;
+  right: 10px;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+}
+
+.card .tgl-btn span {
+  background: #000;
+  display: block;
+  height: 2px;
+  width: 50px;
+  margin: 20px;
+  position: relative;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+}
+
+.card .tgl-btn span::before, .card .tgl-btn span::after {
+  content: "";
+  background: #000;
+  display: block;
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  transition: all 0.66s cubic-bezier(1, -0.28, 0.66, 0.48);
+}
+
+.card .tgl-btn span::before {
+  bottom: -10px;
+}
+
+.card .tgl-btn span::after {
+  bottom: -5px;
+}
+
+.card [type=checkbox] {
+  display: none;
+}
+
+.card [type=checkbox]:checked + .tgl-btn {
+  background: transparent;
+}
+
+.card [type=checkbox]:checked + .tgl-btn span {
+  background: #000d80;
+  width: 0;
+}
+
+.card [type=checkbox]:checked + .tgl-btn span::before {
+  bottom: -5px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+
+.card [type=checkbox]:checked + .tgl-btn span::after {
+  bottom: -5px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+.card [type=checkbox]:not(:checked) ~ .tgl-view .card-image {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.card [type=checkbox]:not(:checked) ~ .tgl-view .card-detail {
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  min-height: 0;
+  max-height: 0;
+}
+
+.card [type=checkbox]:checked ~ .tgl-view .card-image {
+  border-radius: 30px;
+  height: 60px;
+  width: 60px;
+  margin: 10px 0;
+}
+
+.card [type=checkbox]:checked ~ .tgl-view .card-image img {
+  height: 60px;
+}
+
+.card [type=checkbox]:checked ~ .tgl-view .card-title {
+  font-size: 18px;
+  line-height: 60px;
+  margin-top: -80px;
+  margin-left: -10px;
+  padding: 10px 10px 10px 80px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card [type=checkbox]:checked ~ .tgl-view .card-title::before {
+  top: 0px;
+}
+
+.card [type=checkbox]:checked ~ .tgl-view .card-title::after {
+  bottom: -40px;
+}
+
+.card [type=checkbox]:checked ~ .tgl-view .card-detail {
+  opacity: 1;
+  padding: 40px 20px;
+  min-height: 290px;
+  max-height: 400px;
+}
+
+@media only screen and (min-width: 500px) {
+  .grid {
+    margin-left: -20px;
+    margin-right: -20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    margin: 20px;
+
+  }
+}
+@media only screen and (min-width: 900px) {
+  .container {
+    margin: 80px auto;
+    max-width: 1200px;
+    width: calc(100% - 160px);
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>REGISSTER OR CHECK IF YOU ARE REGISTERED</h1>
+
+        <div class="grid">
+
+            <div class="card">
+                <a href="" style="text-decoration: none;">
+                <input id="card1" type="checkbox" checked>
+                <label class="tgl-btn" for="card1"><span></span></label>
+                <div class="tgl-view">
+                    <div class="card-image">
+                        <img src="482086956_673683025200240_3979343768889021261_n.jpg" alt="random image">
+                    </div>
+                    <h2 class="card-title" style="display: block; color: #fff;">back to home</h2>
+                    <p class="card-detail">PHIBMAT, the Professional Higher Institute of Business Management and Technology, is dedicated to providing top-tier professional training to equip students with the skills necessary for success in the business world. The homepage of PHIBMAT's official website</p>
+                </div>
+            </a>
+            </div>
+
+            <div class="card">
+                <a href="display.asp" style="text-decoration: none;">
+                <input id="card2" type="checkbox">
+                <label class="tgl-btn" for="card2"><span></span></label>
+                <div class="tgl-view">
+                    <div class="card-image">
+                        <img src="482020269_671898252045384_2359334788654362494_n.jpg" alt="kitti">
+                    </div>
+                    <h2 class="card-title" style="display: block; color: #fff;">check the registry list</h2>
+                    <p class="card-detail">Quality Training: PHIBMAT offers high-quality training in various fields, ensuring that graduates possess the competence required to thrive in both national and international job markets.​
+                        Air University
+                        +2
+                        phibmatuniversity.com
+                        +2
+                        TikTok
+                        +2
+                        
+                        Experienced Faculty: The institute employs lecturers with industry experience and hands-on expertise, providing students with practical knowledge and insights.​
+                        phibmatuniversity.com
+                        
+                        Comprehensive Programs: PHIBMAT offers a range of certifications, including HND, Degree, Masters, BTS, Licence, and Master, catering to diverse educational needs</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="collectdata.asp" style="text-decoration: none;">
+                <input id="card3" type="checkbox">
+                <label class="tgl-btn" for="card3"><span></span></label>
+                <div class="tgl-view">
+                    <div class="card-image">
+                        <img src="482086956_673683025200240_3979343768889021261_n.jpg" alt="flickr">
+                    </div>
+                    <h2 class="card-title" style="display: block; color: #fff;">register</h2>
+                    <p class="card-detail">Student-Centered Approach: Understanding the unique learning needs of each student, PHIBMAT aligns career aspirations with appropriate programs, focusing not just on certification but also on competence and professional excellence.​
+                        phibmatuniversity.com
+                        
+                        Additionally, the homepage features testimonials and success stories from alumni, showcasing the institute's impact on their professional journeys. It also provides information on admissions, available programs, and contact details for prospective students seeking further information. </p>
+                </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- <script>
+        importScripts("https://js.pusher.com/beams/service-worker.js");
+        http://localhost:3000/service-worker.js
+
+    </script> -->
+   
+</body>
+</html>
+
