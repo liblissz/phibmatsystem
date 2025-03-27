@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 
+    - primary meta tags
+  -->
+  <title> PHIBMAT website</title>
+  <meta name="title" content="PHIBMAT website">
+  <meta name="description" content="This is a blog html template made by li blissz">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="469748197_613037524598124_3444171758591108752_n-removebg-preview.png" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
+  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img style="background: #ffffff5b;" src="469748197_613037524598124_3444171758591108752_n-removebg-preview.png" width="79" height="37" alt="phibmat logo">
+      
+      
+       <!-- <span class="span" id="nom"> </span> -->
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            
+            <img src="469748197_613037524598124_3444171758591108752_n-removebg-preview.png" width="79" height="37" alt="Wren logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>About</a>
+          </li>
+
+          <li>
+            <a href="liblisszproject\index.html" class="navbar-link hover-1" data-nav-toggler>text admins</a>
+          </li>
+
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>details </a>
+          </li>
+
+          <li>
+            <a href="#lol" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+          </li>
+
+        </ul>
+
+        <div class="navbar-bottom">
+
+          <div class="profile-card">
+            <img src="469748197_613037524598124_3444171758591108752_n-removebg-preview.png" width="48" height="48" alt="Steven" class="profile-banner">
+
+            <div>
+              <p class="card-title">PHIBMAT university !</p>
+
+              
+            </div>
+          </div>
+
+          <ul class="link-list">
+
+        
+            <li>
+              <a href="#" onclick="logout()" class="navbar-bottom-link hover-1">Sign Out</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <p class="copyright-text">
+          Copyright 2022 © liblissz 
+        </p>
+
+      </nav>
+
+      <a href="http://localhost:800/" class="btn btn-primary">ENROLL</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero hidden-content" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">PHIBMAT UNIVERSITY !</p>
+
+            <h1 class="headline headline-1 section-title">
+             hello <span class="span" id="nom"> </span><span class="span">!</span>
+            </h1>
+<script type="module" src="./homepage.js"></script>
+            <p class="hero-text ">
+              The Professional Higher Institute of Business
+               Management & Technology (PHIBMAT) is a higher education institution located in Cameroon. 
+            </p>
+
+            <div class="input-wrapper">
+
+              <input type="text" name="email_address" id="searchinput" placeholder="Type your search here" required
+                class="input-field" autocomplete="off">
+
+                <script>
+                  const pages = [
+            {title: "home", url:"csharp.html", content:"learn c#" },
+            {title: "about", url:"#topics", content:"give a feedback message" },
+            {title: "text admins", url:"#featured", content:"learn java" },
+            {title: "contact", url:"#recent", content:"learn python" }
+            ];
+            
+            function search(){
+            const query = document.getElementById("searchinput").value.toLowerCase();
+            const resultcontainer = document.getElementById("results");
+            resultcontainer.innerHTML ='';
+            if(query){
+                const results = pages.filter(pages => pages.content.toLowerCase().includes(query)||
+                pages.title.toLowerCase().includes(query)
+            );
+            if(results.length > 0){
+                results.forEach(result =>{
+                    const resultDiv = document.createElement('div');
+                    resultDiv.classList.add('results');
+               
+                    resultDiv.innerHTML = `<h2><a style ="color: white;" href="${result.url}">${result.title}</a></h2>
+                    <p>${result.content}</p>`;
+                    resultcontainer.appendChild(resultDiv);
+                    
+                });
+            }
+                else{
+                    resultcontainer.innerHTML = `<p>no results found</p>`
+                }
+            
+            }
+            }
+            
+                </script>
+
+              <button class="btn btn-primary"  onclick="search()">
+                <span class="span">search</span>
+
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+<div id="results" style="position: absolute;"></div>
+<style>
+  #results{
+    background: #041c4196;
+    padding: 12px;
+  }
+</style>
+            </div>
+
+          </div>
+
+          <div class="hero-banner">
+
+            <img src="undraw_hiking_9zta.svg" width="327" height="490" alt="Wren Clark" class="w-100">
+
+            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+
+            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+
+          </div>
+
+          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+
+          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #TOPICS
+      -->
+
+      <section class="topics hidden-content" id="topics" aria-labelledby="topic-label">
+        <div class="container">
+
+          <div class="card topic-card">
+
+            <div class="card-content">
+
+              <h2 class="headline headline-2 section-title card-title" id="topic-label">
+              PHIBMAT
+              </h2>
+
+              <p class="card-text">
+                It operates under the authorization of the Ministry of Higher Education and is mentored by the University of Buea.
+              </p>
+
+              <div class="btn-group">
+                <button class="btn-icon" aria-label="previous" data-slider-prev>
+                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
+                </button>
+
+                <button class="btn-icon" aria-label="next" data-slider-next>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+
+            </div>
+
+            <div class="slider" data-slider>
+              <ul class="slider-list" data-slider-container>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images\480582146_667024165866126_4591778345151586476_n.jpg" width="507" height="618" loading="lazy" alt="Sport"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">CHINA</span>
+
+                      <p class="slider-subtitle">amazing</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images\480940054_673683015200241_7870642365016373249_n.jpg" width="507" height="618" loading="lazy" alt="Travel"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">staffs</span>
+
+                      <p class="slider-subtitle">amazing</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images\482020269_671898252045384_2359334788654362494_n.jpg" width="507" height="618" loading="lazy" alt="Design"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">football</span>
+
+                      <p class="slider-subtitle">active</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images\484631589_680140324554510_7344346216012348216_n.jpg" width="507" height="618" loading="lazy" alt="Movie"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">matchpass</span>
+
+                      <p class="slider-subtitle">never stop</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="#" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="images\481194590_666726582562551_7368322499628334352_n.jpg" width="507" height="618" loading="lazy" alt="Lifestyle"
+                        class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">phibmat</span>
+
+                      <p class="slider-subtitle">amazing</p>
+                    </div>
+
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURED POST
+      -->
+
+      <section class="section feature hidden-content" aria-label="feature" id="featured">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title">
+            <span class="span">PHIBMAT HIGHLIGHTS</span>
+          </h2>
+
+          <p class="section-text">
+           see more about us
+          </p>
+
+          <ul class="feature-list">
+
+            <li>
+              <div class="card feature-card">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images\482005105_667024342532775_7734404693352361056_n.jpg" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#partners</a>
+
+                      <a href="#" class="span hover-2">#canada</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">3 hours meetin</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                     Building strong relationship with our partners
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper hidden-content">
+
+                    <div class="profile-card">
+                      <img src="images\481194590_666726582562551_7368322499628334352_n.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">mr nchendeh</p>
+
+                        <p class="card-subtitle">25 Nov 2024</p>
+                      </div>
+                    </div>
+<!-- 
+                    <a href="#" class="card-btn">Read more</a> -->
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card hidden-content">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images\480983005_666726702562539_8597719565378386125_n.jpg" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#partners</a>
+
+                      <a href="#" class="span hover-2">#china</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2 hours meeting</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                   our ambawedor from china came to talk with our student
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper hidden-content">
+
+                    <div class="profile-card">
+                      <img src="images\484169092_680142841220925_6941021832224089597_n.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Mr Roland</p>
+
+                        <p class="card-subtitle">25 Jan 2025</p>
+                      </div>
+                    </div>
+
+                    <!-- <a href="#" class="card-btn">Read more</a> -->
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card hidden-content">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images\482020269_671898252045384_2359334788654362494_n.jpg" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content hidden-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#phibmat</a>
+
+                      <a href="#" class="span hover-2">#football</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">90 mins play</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                  our student are divice in talents even in football
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper hidden-content">
+
+                    <div class="profile-card">
+                      <img src="images\482005105_667024342532775_7734404693352361056_n.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">football</p>
+
+                        <p class="card-subtitle">25 feb 2025</p>
+                      </div>
+                    </div>
+
+                    <!-- <a href="#" class="card-btn">Read more</a> -->
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card hidden-content">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images\481279471_673683028533573_6067727445106682874_n.jpg" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#phibbmat</a>
+
+                      <a href="#" class="span hover-2">#secretary assist</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">2 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+                    Meet phibmat dedicated secretary assistant 
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper hidden-content">
+
+                    <div class="profile-card">
+                      <img src="images\481313637_671182575450285_6955929708325912366_n.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">secretary</p>
+
+                        <p class="card-subtitle">25 jan 2025</p>
+                      </div>
+                    </div>
+<!-- 
+                    <a href="#" class="card-btn">Read more</a> -->
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="card feature-card hidden-content">
+
+                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
+                  <img src="images\480768456_666726629229213_5610364975665846477_n.jpg" width="1602" height="903" loading="lazy"
+                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="#" class="span hover-2">#phibmat</a>
+
+                      <a href="#" class="span hover-2">#classroom</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">6 mins read</span>
+                    </div>
+                  </div>
+
+                  <h3 class="headline headline-3">
+                    <a href="#" class="card-title hover-2">
+          providing a well condusive enviroment for studies
+                    </a>
+                  </h3>
+
+                  <div class="card-wrapper hidden-content">
+
+                    <div class="profile-card">
+                      <img src="images\481279471_673683028533573_6067727445106682874_n.jpg" width="48" height="48" loading="lazy" alt="Joseph"
+                        class="profile-banner">
+
+                      <div>
+                        <p class="card-title">Fedellia</p>
+
+                        <p class="card-subtitle">25 jan 2025</p>
+                      </div>
+                    </div>
+
+       
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+
+        </div>
+
+        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #POPULAR TAGS
+      -->
+
+      <section class="tags hidden-content" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">article and slogant</span>
+          </h2>
+
+          <p class="section-text">
+          
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\479728591_666329822602227_4576448037839595569_n.jpg" width="32" height="32" loading="lazy" alt="Travel">
+
+                <p class="btn-text">Building</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\480311078_677150944853448_5293937193855584844_n.jpg" width="32" height="32" loading="lazy" alt="Culture">
+
+                <p class="btn-text">A brighter</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\480311078_677150944853448_5293937193855584844_n.jpg" width="32" height="32" loading="lazy" alt="Lifestyle">
+
+                <p class="btn-text">Tmmorow</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\480582146_667024165866126_4591778345151586476_n.jpg" width="32" height="32" loading="lazy" alt="Fashion">
+
+                <p class="btn-text">shapining</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\481903977_666726675895875_360445664072122851_n.jpg" width="32" height="32" loading="lazy" alt="Food">
+
+                <p class="btn-text">the future</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\480768456_666726629229213_5610364975665846477_n.jpg" width="32" height="32" loading="lazy" alt="Space">
+
+                <p class="btn-text">join</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\481279471_673683028533573_6067727445106682874_n.jpg" width="32" height="32" loading="lazy" alt="Animal">
+
+                <p class="btn-text">phibmat</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\482005105_667024342532775_7734404693352361056_n.jpg" width="32" height="32" loading="lazy" alt="Minimal">
+
+                <p class="btn-text">university</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\481903977_666726675895875_360445664072122851_n.jpg" width="32" height="32" loading="lazy" alt="Interior">
+
+                <p class="btn-text">excellence</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\484169092_680142841220925_6941021832224089597_n.jpg" width="32" height="32" loading="lazy" alt="Plant">
+
+                <p class="btn-text">nonstop</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\482005105_667024342532775_7734404693352361056_n.jpg" width="32" height="32" loading="lazy" alt="Nature">
+
+                <p class="btn-text">learning </p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <img src="images\482020269_671898252045384_2359334788654362494_n.jpg" width="32" height="32" loading="lazy" alt="Business">
+
+                <p class="btn-text">phibmat</p>
+              </button>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #RECENT POST
+      -->
+
+      <section class="section recent-post hidden-content" id="recent" aria-labelledby="recent-label">
+        <div class="container">
+
+          <div class="post-main">
+
+            <h2 class="headline headline-2 section-title">
+              <span class="span">PHIBMAT UNIVERSITY</span>
+            </h2>
+
+            <p class="section-text">
+              Don't miss this oppoturnity
+            </p>
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="recent-post-card hidden-content">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images\482020269_671898252045384_2359334788654362494_n.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">what we do</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">our fields of studies</a>
+                    </h3>
+
+                    <p class="card-text hidden-content">
+                      PHIBMAT offers programs in various fields, including engineering, nursing, laboratory sciences, software engineering, accounting, and logistics management. The institute actively participates in events such as International
+                       Labour Day, reflecting its commitment to engaging with the broader community.
+                    </p>
+
+                    <div class="card-wrapper hidden-content">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># phibmat</a>
+
+                        <a href="#" class="span hover-2"># departments</a>
+                      </div>
+
+                      <div class="wrapper">
+                       
+
+                       
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card hidden-content">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images\481903977_666726675895875_360445664072122851_n.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content hidden-content">
+
+                    <a href="#" class="card-badge">our proffetionality</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">PHIBMAT</a>
+                    </h3>
+
+                    <p class="card-text hidden-content">
+                      (PHIBMAT) is a higher education 
+                      institution located in Cameroon. It operates under the authorization of the Ministry of Higher Education
+                       and is mentored by the University of Buea.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># partner</a>
+
+                        <a href="#" class="span hover-2"># china</a>
+                      </div>
+
+                      <div class="wrapper">
+              
+
+                       
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card hidden-content">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images\480983005_666726702562539_8597719565378386125_n.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">PHIBMAT</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">PHIBMAT</a>
+                    </h3>
+
+                    <p class="card-text">
+                      PHIBMAT offers programs in various fields, including engineering,
+                      nursing, laboratory sciences, software engineering, accounting, and logistics management. The institute actively 
+                      participates in events.
+                    </p>
+
+                    <div class="card-wrapper">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># partner</a>
+
+                        <a href="#" class="span hover-2"># china</a>
+                      </div>
+
+                      <div class="wrapper">
+                 
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images\480582146_667024165866126_4591778345151586476_n.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content">
+
+                    <a href="#" class="card-badge">PHIBMAT</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">insights</a>
+                    </h3>
+
+                    <p class="card-text">
+                      mentorship under the University of Buea, and the diverse programs it offers in fields such as engineering, nursing, laboratory sciences, software engineering, accounting, and logistics management. Additionally, I mentioned PHIBMAT's active participation in community events like International Labour Day.​
+
+                    </p>
+
+                    <div class="card-wrapper hidden-content">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># Travel</a>
+
+                        <a href="#" class="span hover-2"># PHIBMAT</a>
+                      </div>
+
+                      <div class="wrapper">
+                       
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="recent-post-card hidden-content">
+
+                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                    <img src="images\479728591_666329822602227_4576448037839595569_n.jpg" width="271" height="258" loading="lazy"
+                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                  </figure>
+
+                  <div class="card-content hidden-content">
+
+                    <a href="#" class="card-badge">PHIBMAT</a>
+
+                    <h3 class="headline headline-3 card-title">
+                      <a href="#" class="link hover-2">I appreciate your interest</a>
+                    </h3>
+
+                    <p class="card-text">
+                      in the Professional Higher Institute of Business Management
+                      & Technology (PHIBMAT). However, based on the information available, I have already provided 
+                      a comprehensive overview of PHIBMAT, including its authorization by the Ministry of Higher 
+                      Education
+                    </p>
+
+                    <div class="card-wrapper hidden-content">
+                      <div class="card-tag">
+                        <a href="#" class="span hover-2"># proffesional</a>
+
+                        <a href="#" class="span hover-2"># phibmat</a>
+                      </div>
+
+                      <div class="wrapper">
+                       
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+   
+
+          </div>
+
+          <div class="post-aside grid-list hidden-content">
+
+            <div class="card aside-card">
+
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">testimonies</span>
+              </h3>
+
+              <ul class="popular-list">
+
+                <li>
+                  <div class="popular-card hidden-content">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images\482020269_671898252045384_2359334788654362494_n.jpg" width="64" height="64" loading="lazy"
+                        alt="Creating is a privilege but it’s also a gift" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">phibmat has empowered me with so much courage and wisdom</a>
+                      </h4>
+
+                      <div class="warpper">
+                     
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card hidden-content">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images\481194590_666726582562551_7368322499628334352_n.jpg" width="64" height="64" loading="lazy"
+                        alt="Being unique is better than being perfect" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">phibmat has empowered me with so much courage and wisdom</a>
+                      </h4>
+
+                      <div class="warpper">
+                  
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card hidden-content">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images\481903977_666726675895875_360445664072122851_n.jpg" width="64" height="64" loading="lazy"
+                        alt="Every day, in every city and town across the country" class="img-cover">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">phibmat has empowered me with so much courage and wisdom</a>
+                      </h4>
+
+                      <div class="warpper">
+                   
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card hidden-content">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images\481313637_671182575450285_6955929708325912366_n.jpg" width="64" height="64" loading="lazy"
+                        alt="Your voice, your mind, your story, your vision" class="img-cover">
+                    </figure>
+
+                    <div class="card-content hidden-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">phibmat has empowered me with so much courage and wisdom</a>
+                      </h4>
+
+                      <div class="warpper">
+         
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="popular-card hidden-content">
+
+                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
+                      <img src="images\480768456_666726629229213_5610364975665846477_n.jpg" width="64" height="64" loading="lazy"
+                        alt="Being unique is better than being perfect" class="img-cover">
+                    </figure>
+
+                    <div class="card-content hidden-content">
+
+                      <h4 class="headline headline-4 card-title">
+                        <a href="#" class="link hover-2">phibmat has empowered me with so much courage and wisdom</a>
+                      </h4>
+
+                      <div class="warpper">
+                  
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="card aside-card hidden-content">
+
+              <h3 class="headline headline-2 aside-title">
+                <span class="span">Latest Facebook Comment</span>
+              </h3>
+
+              <ul class="comment-list">
+
+                <li>
+                  <div class="comment-card">
+
+                    <blockquote class="card-text">
+                      “Promptement ou rapidement “
+                    </blockquote>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="images\481903977_666726675895875_360445664072122851_n.jpg" width="32" height="32" loading="lazy" alt="Jane Cooper">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">Thę Rõõt Węïllēr</p>
+
+                        <time class="card-date" datetime="2022-04-15">15 febuary 2025</time>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card hidden-content">
+
+                    <blockquote class="card-text">
+                      “I mentioned PHIBMAT's active participation in 
+                      community events like International Labour Day.“
+                    </blockquote>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="images\482005105_667024342532775_7734404693352361056_n.jpg" width="32" height="32" loading="lazy" alt="Katen Doe">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">fortune</p>
+
+                        <time class="card-date" datetime="2022-04-15">15 june 2024</time>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="comment-card hidden-content">
+
+                    <blockquote class="card-text">
+                      “ I appreciate your interest in the Professional Higher Institute of Business Management & Technology 
+                      (PHIBMAT). “
+                    </blockquote>
+
+                    <div class="profile-card">
+                      <figure class="profile-banner img-holder">
+                        <img src="images\482086956_673683025200240_3979343768889021261_n.jpg" width="32" height="32" loading="lazy"
+                          alt="Barbara Cartland">
+                      </figure>
+
+                      <div>
+                        <p class="card-title">benard</p>
+
+                        <time class="card-date" datetime="2022-04-15">15 April 2024</time>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="card aside-card insta-card hidden-content">
+
+              <a href="#" class="logo">
+                <img src="469748197_613037524598124_3444171758591108752_n-removebg-preview.png" width="49" height="37" loading="lazy" alt="Wren logo">
+              </a>
+
+              <p class="card-text">
+        Our Gelary
+              </p>
+
+              <ul class="insta-list">
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\482086956_673683025200240_3979343768889021261_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\481279471_673683028533573_6067727445106682874_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\480940054_673683015200241_7870642365016373249_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\481313637_671182575450285_6955929708325912366_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\482020269_671898252045384_2359334788654362494_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\481194590_666726582562551_7368322499628334352_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\484440404_680141287887747_7633773468488914723_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\480582146_667024165866126_4591778345151586476_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
+                    <img src="images\480983005_666726702562539_8597719565378386125_n.jpg" width="276" height="277" loading="lazy" alt="insta post"
+                      class="img-cover">
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="hidden-content">
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <img src="469748197_613037524598124_3444171758591108752_n-removebg-preview.png" width="59" height="37" loading="lazy" alt="Wren logo">
+            </a>
+
+            <p class="footer-text">
+              PHIBMAT varsity vs Atlanta college friendly match score
+03-03 for both teams.
+It was a moment of togetherness and sharing between students and teachers on the occasion of International Women's Day 08 March
+            </p>
+
+            <p class="footer-list-title">Address</p>
+
+            <address class="footer-text address">
+              Behind boulangeri <br>
+           de la gare Bonaberi
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">our links</p>
+
+            <ul>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Home</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">about</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Contact</a>
+              </li>
+
+          
+
+              <li>
+                <a href="#" class="footer-link hover-2">chart with us</a>
+              </li>
+
+
+              <li>
+                <a href="#" class="footer-link hover-2">register</a>
+              </li>
+
+
+
+              <li>
+                <a href="#" class="footer-link hover-2">logout</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">visit official website</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+      send messages to the admin on the difficulties you face
+            </p>
+
+            <form action="https://formsubmit.co/liblissz3@gmail.com" method="POST" id="lol">
+
+            <div class="input-wrapper">
+              <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="email" name="email"  placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+            
+            <div class="input-wrapper">
+              <input type="text" name="text"  placeholder="message here" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <button  type="submit" class="btn btn-primary">
+              <span class="span" >send message</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </button>
+
+</form>
+          </div>
+
+          <a href="#" class="btn btn-primary" onclick="logout()">
+            <span class="span">Sign Out</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; Developed by <a href="http://finalvildash.vercel.app" class="copyright-link">liblissz AKA Orsa Blissz.</a>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+
+                <span class="span">facebook</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+
+                <span class="span">Instagram</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
